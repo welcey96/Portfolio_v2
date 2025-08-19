@@ -1,7 +1,7 @@
 import Controller from '@ember/controller';
 import Lenis from '@studio-freight/lenis';
 import { gsap, ScrollTrigger } from "gsap/all";
-import Utils from "../utils/util"
+
 
 export default class ApplicationController extends Controller {
   constructor() {
@@ -10,7 +10,6 @@ export default class ApplicationController extends Controller {
   }
 
   initialize() {
-    const $ = new Utils();
     const lenis = new Lenis();
 
     lenis.on('scroll', e => {});
