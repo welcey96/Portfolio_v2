@@ -1,0 +1,75 @@
+.horizontal-wrapper {
+  display: flex;
+  gap: 10rem;
+  padding: 0 4rem;
+  height: 80vh;
+  perspective: 1000px;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .horizontal-wrapper {
+    display: block;
+    padding: 0 2rem;
+    height: fit-content;
+  }
+
+  .panel {
+    padding: 1rem 0;
+    margin: 1rem 0;
+  }
+}
+
+.panel {
+  flex: 0 0 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  padding: 1rem;
+  background: white;
+  color: black;
+  border-radius: 1rem;
+}
+.panel:hover {
+  filter: grayscale(1) sepia(1) saturate(0.5) contrast(0.6) brightness(0.8);
+  transform-origin: center center;
+  transition: filter 0.3s ease-in-out;
+}
+
+.panel-img {
+  width: 100%;
+  height: auto;
+}
+
+.panel h2 {
+  font-size: 2rem;
+}
+
+.scroll-progress {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  width: calc(100% - 4rem);
+  height: 2px;
+  background: rgb(255 255 255 / 20%);
+  border-radius: 1px;
+}
+
+.scroll-progress-inner {
+  width: 0%;
+  height: 100%;
+  background: #f9cdcd; /* your progress color */
+  border-radius: 2px;
+  transform-origin: left center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.muted {
+  font-size: 3rem;
+  transform: translate3d(0px, 0px, 0px) rotate(-4.53333deg) scale(0.95);
+}
