@@ -1,9 +1,10 @@
-@import "lenis.css";
-@import "components/hero.css";
-@import "components/navbar.css";
+@import url("lenis.css");
+@import url("components/hero.css");
+@import url("components/navbar.css");
+@import url("components/projects.css");
 
 @font-face {
-  font-family: "Humane";
+  font-family: Humane;
   src:
     url("/assets/fonts/Humane/Humane-Bold.woff2") format("woff2"),
     url("/assets/fonts/Humane/Humane-Bold.woff") format("woff");
@@ -12,7 +13,7 @@
 }
 
 @font-face {
-  font-family: "Humane";
+  font-family: Humane;
   src:
     url("/assets/fonts/Humane/Humane-Regular.woff2") format("woff2"),
     url("/assets/fonts/Humane/Humane-Regular.woff") format("woff");
@@ -27,16 +28,16 @@
   --bd-color-background-pink: #f9cdcd;
   --bd-color-background-button-primary-base: #fff;
   --bd-color-background-button-primary-hover: #252422;
-  --bd-color-background-button-primary-active: rgba(37, 36, 34, 0.8);
-  --bd-color-background-button-primary-disabled: rgba(37, 36, 34, 0.25);
+  --bd-color-background-button-primary-active: rgb(37 36 34 / 80%);
+  --bd-color-background-button-primary-disabled: rgb(37 36 34 / 25%);
   --bd-color-background-button-secondary-base: #252422;
   --bd-color-background-button-secondary-hover: #fff;
-  --bd-color-background-button-secondary-active: hsla(0, 0%, 100%, 0.8);
-  --bd-color-background-button-secondary-disabled: hsla(0, 0%, 100%, 0.25);
+  --bd-color-background-button-secondary-active: hsl(0deg 0% 100% / 80%);
+  --bd-color-background-button-secondary-disabled: hsl(0deg 0% 100% / 25%);
   --bd-color-background-button-tertiary-base: #f9cdcd;
   --bd-color-background-button-tertiary-hover: #252422;
-  --bd-color-background-button-tertiary-active: hsla(0, 79%, 89%, 0.8);
-  --bd-color-background-button-tertiary-disabled: hsla(0, 79%, 89%, 0.25);
+  --bd-color-background-button-tertiary-active: hsl(0deg 79% 89% / 80%);
+  --bd-color-background-button-tertiary-disabled: hsl(0deg 79% 89% / 25%);
   --bd-color-background-footer-primary-light: #252422;
   --bd-color-background-footer-primary-dark: #f4f4f4;
   --bd-color-background-footer-secondary-light: #191918;
@@ -68,12 +69,12 @@
   --bd-color-base-grey-900: #191918;
   --bd-color-base-white: #fff;
   --bd-color-base-black: #000;
-  --bd-color-opaque-grey-800-high: rgba(37, 36, 34, 0.8);
-  --bd-color-opaque-grey-800-low: rgba(37, 36, 34, 0.25);
-  --bd-color-opaque-white-high: hsla(0, 0%, 100%, 0.8);
-  --bd-color-opaque-white-low: hsla(0, 0%, 100%, 0.25);
-  --bd-color-opaque-pink-high: hsla(0, 79%, 89%, 0.8);
-  --bd-color-opaque-pink-low: hsla(0, 79%, 89%, 0.25);
+  --bd-color-opaque-grey-800-high: rgb(37 36 34 / 80%);
+  --bd-color-opaque-grey-800-low: rgb(37 36 34 / 25%);
+  --bd-color-opaque-white-high: hsl(0deg 0% 100% / 80%);
+  --bd-color-opaque-white-low: hsl(0deg 0% 100% / 25%);
+  --bd-color-opaque-pink-high: hsl(0deg 79% 89% / 80%);
+  --bd-color-opaque-pink-low: hsl(0deg 79% 89% / 25%);
   --bd-color-border-base: #252422;
   --bd-color-border-secondary: #fff;
   --bd-color-border-tertiary: #f9cdcd;
@@ -156,7 +157,6 @@
   --bd-size-line-height-desktop-8xl: 7.6rem;
   --bd-size-grid-gutter-mobile: 1.6rem;
   --bd-size-grid-gutter-desktop: 2rem;
-
   --bd-size-grid-padding-mobile: 5.4vw;
   --bd-size-grid-padding-desktop: 5rem;
   --bd-size-spacing-section-fixed-sm: 6rem;
@@ -185,49 +185,37 @@
   --bd-size-spacing-section-thinking-desktop: 12.5vw;
   --bd-size-spacing-metabar-mobile: 6rem;
   --bd-size-spacing-metabar-desktop: 8.5rem;
-
   --bd-time-delay-initial: 0.5s;
   --bd-time-delay-none: 0s;
   --bd-font-family-body: "Humane", "SctoGroteskA", sans-serif;
   --bd-font-weight-regular: 300;
   --bd-font-weight-medium: 400;
   --bd-font-weight-bold: 700;
-
   --bd-font-text-body-sm-mobile-font-size: 1.1rem;
   --bd-font-text-body-sm-desktop-font-size: 1.4rem;
-
   --bd-font-text-body-base-mobile-font-size: 1.4rem;
   --bd-font-text-body-base-desktop-font-size: 1.8rem;
-
   --bd-font-text-body-lg-mobile-font-size: 1.8rem;
   --bd-font-text-body-lg-desktop-font-size: 2.2rem;
-
   --bd-font-text-heading-xs-mobile-font-size: 1.6rem;
   --bd-font-text-heading-xs-desktop-font-size: 2.2rem;
-
   --bd-font-text-heading-sm-mobile-font-size: 1.8rem;
   --bd-font-text-heading-sm-desktop-font-size: 2.2rem;
-
   --bd-font-text-heading-md-mobile-font-size: 2rem;
   --bd-font-text-heading-md-desktop-font-size: 2.8rem;
-
   --bd-font-text-heading-lg-mobile-font-size: 2.2rem;
   --bd-font-text-heading-lg-desktop-font-size: 3.8rem;
-
   --bd-font-text-heading-xl-mobile-font-size: 2.4rem;
   --bd-font-text-heading-xl-desktop-font-size: 4.2rem;
-
   --bd-font-text-heading-xxl-mobile-font-size: 4rem;
   --bd-font-text-heading-xxl-portrait-font-size: 4.6rem;
   --bd-font-text-heading-xxl-desktop-font-size: 6.25vw;
 
-  /* custom*/
+  /* custom */
   --bd-size-grid-width: 100vw;
   --bd-size-grid-height: 100vh;
-
   --bd-size-padding-desktop: 1.75rem;
   --bd-size-padding-mobile: 1rem;
-
   --bd-size-height-navbar: 3.5rem;
 }
 
@@ -240,6 +228,7 @@
 }
 
 body {
+  cursor: none; /* hide default cursor */
   margin: 0;
   font-family: var(--bd-font-family-body);
   line-height: 1.6;
@@ -255,5 +244,48 @@ section {
   position: relative;
 }
 
-@media screen and (min-width: 1536px) {
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bd-color-background-pink);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.custom-cursor.hide {
+  display: none;
+}
+
+.custom-cursor.cursor-panel {
+  width: 128px;
+  height: 128px;
+  background: var(--bd-color-background-pink);
+  opacity: 0.7;
+  color: black;
+  font-family: "Humane";
+  font-size: 1.4rem;
+  letter-spacing: 0.2;
+}
+.v-desktop {
+  visibility: collapse;
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .v-desktop {
+    visibility: visible;
+    display: contents;
+  }
 }
