@@ -5,12 +5,13 @@ import Utils from '../utils/util';
 export default class ProjectsComponent extends Component {
   didInsertElement() {
     super.didInsertElement();
-    const isMobile = document.documentElement.clientWidth <= 768; // adjust breakpoint as needed
+    const isMobile = document.documentElement.clientWidth <= 768;
+    const $ = new Utils();
 
     if (!isMobile) {
-      const wrapper = document.querySelector('.horizontal-wrapper');
+      const wrapper = $._qs('.horizontal-wrapper');
       const images = gsap.utils.toArray('.panel');
-      const progressBar = document.querySelector('.scroll-progress-inner');
+      const progressBar = $._qs('.scroll-progress-inner');
 
       gsap.to(wrapper, {
         x: () => -(wrapper.scrollWidth - window.innerWidth),
@@ -21,7 +22,7 @@ export default class ProjectsComponent extends Component {
           end: () => '+=' + (wrapper.scrollWidth - window.innerWidth),
           scrub: true,
           pin: true,
-          markers: true,
+          //   markers: true,
           onUpdate: (self) => {
             const progress = self.progress * 100; // 0–100%
             gsap.to(progressBar, { width: progress + '%' });

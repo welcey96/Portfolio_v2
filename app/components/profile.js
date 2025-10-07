@@ -20,8 +20,9 @@ export default class ProfileComponent extends Component {
     const tl = gsap.timeline({
       scrollTrigger: scrollTriggerConfig,
     });
-
-    tl.to('body', { backgroundColor: '#252422ff' })
+    
+    tl.from('body', { backgroundColor: '#fff' })
+      .to('body', { backgroundColor: '#252422ff' })
       .to('.text-reveal', { color: '#f9cdcdff' }, 0)
       .fromTo(
         '#profile-section .text-reveal',

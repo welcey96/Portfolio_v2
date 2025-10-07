@@ -1,4 +1,5 @@
-.horizontal-wrapper {
+.horizontal-wrapper,
+.horizontal-wrapper2 {
   display: flex;
   gap: 10rem;
   padding: 0 4rem;
@@ -7,20 +8,8 @@
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  .horizontal-wrapper {
-    display: block;
-    padding: 0 2rem;
-    height: fit-content;
-  }
-
-  .panel {
-    padding: 1rem 0;
-    margin: 1rem 0;
-  }
-}
-
-.panel {
+.panel,
+.panel2 {
   flex: 0 0 40vw;
   display: flex;
   flex-direction: column;
@@ -32,7 +21,17 @@
   color: black;
   border-radius: 1rem;
 }
-.panel:hover {
+
+.panel2 {
+  background: linear-gradient(
+    90deg,
+    rgb(255, 166, 46) 0%,
+    rgb(234, 77, 44) 100%
+  );
+}
+
+.panel:hover,
+.panel2:hover {
   filter: grayscale(1) sepia(1) saturate(0.5) contrast(0.6) brightness(0.8);
   transform-origin: center center;
   transition: filter 0.3s ease-in-out;
@@ -43,8 +42,9 @@
   height: auto;
 }
 
-.panel h2 {
-  font-size: 2rem;
+.panel h2,
+.panel2 h2 {
+  font-size: 2.3rem;
 }
 
 .scroll-progress {
@@ -71,5 +71,32 @@
 
 .muted {
   font-size: 3rem;
-  transform: translate3d(0px, 0px, 0px) rotate(-4.53333deg) scale(0.95);
+  transform: translate3d(0, 0, 0) rotate(-4.53333deg) scale(0.95);
+}
+
+@media screen and (max-width: 768px) {
+  #projects-section,
+  #projects-section2 {
+    min-height: 100vh;
+  }
+
+  .horizontal-wrapper,
+  .horizontal-wrapper2 {
+    display: block;
+    padding: 0 2rem;
+    height: fit-content;
+  }
+
+  .panel,
+  .panel2 {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+  .horizontal-wrapper,
+  .horizontal-wrapper2 {
+    overflow: scroll;
+  }
 }

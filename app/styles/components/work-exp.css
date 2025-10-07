@@ -1,0 +1,18 @@
+#exp-section {
+  height: auto;
+  padding-block: 4rem;
+}
+
+#exp-section ul {
+  margin-block: 4rem;
+}
+
+#exp-section li {
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  #exp-section li {
+    font-size: 2rem;
+  }
+}

@@ -4,6 +4,13 @@ import { gsap } from 'gsap/all';
 export default class HeroComponent extends Component {
   didInsertElement() {
     super.didInsertElement();
+    gsap.to('body', {
+      backgroundColor: '#fff',
+      scrollTrigger: {
+        trigger: '#hero-section',
+        toggleActions: 'play none play reverse',
+      },
+    });
     gsap.fromTo(
       '#hero-section .text-reveal',
       { yPercent: '200', rotateZ: 10, opacity: 0 },
