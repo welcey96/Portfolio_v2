@@ -21,7 +21,7 @@ export default class ProfileComponent extends Component {
       scrollTrigger: scrollTriggerConfig,
     });
     
-    tl.from('body', { backgroundColor: '#fff' })
+    tl.from('body', { backgroundColor: '#F2F2F2' })
       .to('body', { backgroundColor: '#252422ff' })
       .to('.text-reveal', { color: '#f9cdcdff' }, 0)
       .fromTo(

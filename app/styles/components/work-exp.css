@@ -11,6 +11,22 @@
   border-bottom: 1px solid #fff;
 }
 
+#exp-section .btns {
+  padding: 0.2rem 2rem;
+  margin-top: 0;
+  font-size: 2rem;
+  height: fit-content;
+  border: 2px solid #fff;
+  color: #f9cdcdff;
+}
+#exp-section .btns::before {
+  background-color: #fff;
+}
+
+#exp-section .btns:hover span {
+  color: #000;
+}
+
 @media screen and (max-width: 1024px) {
   #exp-section li {
     font-size: 2rem;

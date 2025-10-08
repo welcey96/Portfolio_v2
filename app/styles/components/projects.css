@@ -17,7 +17,7 @@
   justify-content: center;
   height: fit-content;
   padding: 1rem;
-  background: white;
+  background: #f2f2f2;
   color: black;
   border-radius: 1rem;
 }
@@ -53,14 +53,14 @@
   left: 2rem;
   width: calc(100% - 4rem);
   height: 2px;
-  background: rgb(255 255 255 / 20%);
+  background: #ffffff33;
   border-radius: 1px;
 }
 
 .scroll-progress-inner {
   width: 0%;
   height: 100%;
-  background: #f9cdcd; /* your progress color */
+  background: #f9cdcd; /* progress color */
   border-radius: 2px;
   transform-origin: left center;
 }
@@ -72,6 +72,10 @@
 .muted {
   font-size: 3rem;
   transform: translate3d(0, 0, 0) rotate(-4.53333deg) scale(0.95);
+}
+
+#projects-section2 .text-reveal {
+  color: #556270 !important;
 }
 
 @media screen and (max-width: 768px) {

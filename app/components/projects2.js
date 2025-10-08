@@ -16,7 +16,7 @@ export default class Projects2Component extends Component {
         backgroundColor: '#252422ff',
       });
       gsap.to('body', {
-        backgroundColor: '#fff',
+        backgroundColor: '#F2F2F2',
         scrollTrigger: {
           trigger: '#projects-section2',
           toggleActions: 'play none play reverse',

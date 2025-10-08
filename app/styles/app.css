@@ -233,7 +233,7 @@ body {
   margin: 0;
   font-family: var(--bd-font-family-body);
   line-height: 1.6;
-  background-color: #fff;
+  background-color: #F2F2F2;
   padding: 0;
   color: var(--color-lighter-black);
   position: relative;
@@ -292,4 +292,46 @@ section {
     visibility: visible;
     display: contents;
   }
+}
+
+.btns {
+  position: relative;
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  color: #000; /* initial text color */
+  text-decoration: none;
+  overflow: hidden;
+  border: 2px solid #000;
+  font-family: "Humane";
+  border-radius: 14px;
+  margin-top: 1.5rem;
+  font-size: 3.2rem;
+}
+
+.btns span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.btns::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* black fill */
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+  z-index: 0; /* behind text */
+}
+
+.btns:hover::before {
+  transform: scaleY(1); /* fill from bottom to top */
+}
+
+.btns:hover span {
+  color: #f9cdcdff;
 }

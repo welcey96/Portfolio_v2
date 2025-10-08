@@ -26,6 +26,3 @@
     --grid-gutter: var(--bd-size-grid-gutter-desktop);
   }
 }
-
-@media only screen and (max-width: 368px) {
-}

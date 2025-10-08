@@ -5,7 +5,7 @@ export default class HeroComponent extends Component {
   didInsertElement() {
     super.didInsertElement();
     gsap.to('body', {
-      backgroundColor: '#fff',
+      backgroundColor: '#F2F2F2',
       scrollTrigger: {
         trigger: '#hero-section',
         toggleActions: 'play none play reverse',
