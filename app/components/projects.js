@@ -9,7 +9,6 @@ export default class ProjectsComponent extends Component {
     const isMobile = document.documentElement.clientWidth <= 1024;
     const $ = new Utils();
 
- 
     if (!isMobile) {
       const wrapper = $._qs('.horizontal-wrapper');
       const images = gsap.utils.toArray('.panel');
@@ -50,6 +49,15 @@ export default class ProjectsComponent extends Component {
       window.addEventListener('scroll', updateTilt);
       window.addEventListener('resize', updateTilt);
       updateTilt();
+
+      const img = gsap.utils.toArray('.gif-preview');
+      img.forEach((v, i) => {
+        let original = v.src;
+        let gif = v.dataset.gif;
+     
+        v.addEventListener('mouseenter', () => (v.src = gif));
+        v.addEventListener('mouseleave', () => (v.src = original));
+      });
     }
 
     gsap.from('#projects-section .text-reveal', {
@@ -63,7 +71,7 @@ export default class ProjectsComponent extends Component {
       opacity: 0,
       duration: 1,
       ease: 'power4.out',
-      stagger: 0.3,   
+      stagger: 0.3,
     });
   }
 }
