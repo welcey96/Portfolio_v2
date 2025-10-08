@@ -33,22 +33,20 @@ export default class Projects2Component extends Component {
           pin: true,
         },
       });
-
-      gsap.from('#projects-section2 .text-reveal', {
-        scrollTrigger: {
-          trigger: '#projects-section2',
-          start: 'top top',
-          toggleActions: 'play none play reverse',
-        },
-        yPercent: 200,
-        rotateZ: 10,
-        opacity: 0,
-        duration: 1,
-        ease: 'power4.out',
-        stagger: 0.3,
-      });
     }
-
+    gsap.from('#projects-section2 .text-reveal', {
+      scrollTrigger: {
+        trigger: '#projects-section2',
+        start: 'top top',
+        toggleActions: 'play none play reverse',
+      },
+      yPercent: 200,
+      rotateZ: 10,
+      opacity: 0,
+      duration: 1,
+      ease: 'power4.out',
+      stagger: 0.3,
+    });
     const bg2 = [
       'rgb(20, 45, 70)',
       'linear-gradient(90deg, rgb(255, 166, 46) 0%, rgb(234, 77, 44) 100%)',

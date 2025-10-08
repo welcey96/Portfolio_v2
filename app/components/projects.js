@@ -30,20 +30,6 @@ export default class ProjectsComponent extends Component {
         },
       });
 
-      gsap.from('#projects-section .text-reveal', {
-        scrollTrigger: {
-          trigger: '#projects-section',
-          start: 'top top',
-          toggleActions: 'play none play reverse',
-        },
-        yPercent: 200,
-        rotateZ: 10,
-        opacity: 0,
-        duration: 1,
-        ease: 'power4.out',
-        stagger: 0.3,
-      });
-
       // tilt images
       function updateTilt() {
         const viewportCenter = window.innerWidth / 2;
@@ -63,5 +49,19 @@ export default class ProjectsComponent extends Component {
       window.addEventListener('resize', updateTilt);
       updateTilt();
     }
+
+    gsap.from('#projects-section .text-reveal', {
+      scrollTrigger: {
+        trigger: '#projects-section',
+        start: 'top top',
+        toggleActions: 'play none play reverse',
+      },
+      yPercent: 200,
+      rotateZ: 10,
+      opacity: 0,
+      duration: 1,
+      ease: 'power4.out',
+      stagger: 0.3,
+    });
   }
 }
