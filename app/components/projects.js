@@ -5,9 +5,11 @@ import Utils from '../utils/util';
 export default class ProjectsComponent extends Component {
   didInsertElement() {
     super.didInsertElement();
-    const isMobile = document.documentElement.clientWidth <= 768;
+
+    const isMobile = document.documentElement.clientWidth <= 1024;
     const $ = new Utils();
 
+ 
     if (!isMobile) {
       const wrapper = $._qs('.horizontal-wrapper');
       const images = gsap.utils.toArray('.panel');
@@ -61,7 +63,7 @@ export default class ProjectsComponent extends Component {
       opacity: 0,
       duration: 1,
       ease: 'power4.out',
-      stagger: 0.3,
+      stagger: 0.3,   
     });
   }
 }

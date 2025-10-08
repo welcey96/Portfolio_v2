@@ -20,7 +20,7 @@ export default class ProfileComponent extends Component {
     const tl = gsap.timeline({
       scrollTrigger: scrollTriggerConfig,
     });
-    
+
     tl.from('body', { backgroundColor: '#F2F2F2' })
       .to('body', { backgroundColor: '#252422ff' })
       .to('.text-reveal', { color: '#f9cdcdff' }, 0)
@@ -37,12 +37,13 @@ export default class ProfileComponent extends Component {
         0,
       );
 
-    const isMobile = document.documentElement.clientWidth <= 768; // adjust breakpoint as needed
+    const $ = new Utils();
+    const isMobile = document.documentElement.clientWidth <= 1024;
+    const sceneContainer = $._id('scene-container');
+
     if (!isMobile) {
-      const $ = new Utils();
       const scene = new THREE.Scene();
       const renderer = new THREE.WebGLRenderer({ alpha: true });
-      const sceneContainer = $._id('scene-container');
 
       renderer.setSize(sceneContainer.clientWidth, sceneContainer.clientHeight);
       sceneContainer.appendChild(renderer.domElement);
@@ -100,8 +101,9 @@ export default class ProfileComponent extends Component {
         }
         renderer.render(scene, camera);
       }
-
       animate();
+    } else {
+      sceneContainer.remove();
     }
   }
 }
