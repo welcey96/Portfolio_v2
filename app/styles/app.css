@@ -236,7 +236,6 @@ body {
   background-color: #fff;
   padding: 0;
   color: var(--color-lighter-black);
-  overflow: hidden;
   position: relative;
 }
 
