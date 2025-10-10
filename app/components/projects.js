@@ -54,7 +54,7 @@ export default class ProjectsComponent extends Component {
       img.forEach((v, i) => {
         let original = v.src;
         let gif = v.dataset.gif;
-     
+
         v.addEventListener('mouseenter', () => (v.src = gif));
         v.addEventListener('mouseleave', () => (v.src = original));
       });
@@ -63,8 +63,9 @@ export default class ProjectsComponent extends Component {
     gsap.from('#projects-section .text-reveal', {
       scrollTrigger: {
         trigger: '#projects-section',
-        start: 'top top',
+        start: 'top top+=15%',
         toggleActions: 'play none play reverse',
+        // markers: true,
       },
       yPercent: 200,
       rotateZ: 10,
