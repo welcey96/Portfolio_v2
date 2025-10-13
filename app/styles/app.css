@@ -3,6 +3,7 @@
 @import url("components/navbar.css");
 @import url("components/projects.css");
 @import url("components/work-exp.css");
+@import url("components/contact.css");
 
 @font-face {
   font-family: Humane;
@@ -233,7 +234,7 @@ body {
   margin: 0;
   font-family: var(--bd-font-family-body);
   line-height: 1.6;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 0;
   color: var(--color-lighter-black);
   position: relative;
@@ -287,7 +288,7 @@ section {
     display: none;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .v-desktop {
     visibility: visible;
     display: contents;

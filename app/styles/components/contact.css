@@ -1,0 +1,36 @@
+#contact-section .contact-content {
+  font-family: Humane;
+  line-height: 0.8;
+}
+
+#contact-section #footer {
+  border-top: 1px solid #000;
+  font-family: monospace, system-ui;
+  z-index: 100;
+  padding: 0.2rem 1rem;
+  font-weight: 900;
+}
+
+#contact-section .hover-text {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#contact-section .hover-text .text {
+  display: block;
+  transition: none;
+}
+
+#contact-section .hover-text .top {
+  transform: translateY(0%);
+}
+
+#contact-section .hover-text .bottom {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translateY(0%);
+}
