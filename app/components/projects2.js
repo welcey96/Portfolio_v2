@@ -12,7 +12,7 @@ export default class Projects2Component extends Component {
 
     const scrollTriggerConfig = {
       trigger: '#projects-section2',
-      start: 'top top',
+      start: 'top top+=5%',
       end: 'bottom bottom-=10%',
       toggleActions: 'play none play reverse',
       // markers: true,
@@ -23,7 +23,7 @@ export default class Projects2Component extends Component {
     });
 
     tl.to('body', {
-      backgroundColor: '#F2F2F2',
+      backgroundColor: '#f2f2f2',
     });
 
     const bg2 = [
@@ -52,19 +52,5 @@ export default class Projects2Component extends Component {
         },
       });
     }
-
-    gsap.from('#projects-section2 .text-reveal', {
-      scrollTrigger: {
-        trigger: '#projects-section2',
-        start: 'top top',
-        toggleActions: 'play none play reverse',
-      },
-      yPercent: 200,
-      rotateZ: 10,
-      opacity: 0,
-      duration: 1,
-      ease: 'power4.out',
-      stagger: 0.3,
-    });
   }
 }
