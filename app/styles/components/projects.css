@@ -74,7 +74,7 @@ filter: grayscale(1) sepia(1) saturate(0.5) contrast(0.6) brightness(0.8);
   color: #708090 !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   #projects-section,
   #projects-section2 {
     min-height: 100vh;
@@ -94,7 +94,7 @@ filter: grayscale(1) sepia(1) saturate(0.5) contrast(0.6) brightness(0.8);
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1300px) {
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
   .horizontal-wrapper,
   .horizontal-wrapper2 {
     overflow: scroll;

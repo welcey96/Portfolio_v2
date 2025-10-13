@@ -6,7 +6,7 @@ export default class ProjectsComponent extends Component {
   didInsertElement() {
     super.didInsertElement();
 
-    const isMobile = document.documentElement.clientWidth <= 1024;
+    const isMobile = document.documentElement.clientWidth <= 1025;
     const $ = new Utils();
 
     if (!isMobile) {
